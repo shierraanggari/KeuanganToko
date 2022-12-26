@@ -91,6 +91,7 @@ Partial Class Barang
         '
         'BtnTambah
         '
+        Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambah.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.Location = New System.Drawing.Point(269, 474)
         Me.BtnTambah.Name = "BtnTambah"
@@ -101,6 +102,7 @@ Partial Class Barang
         '
         'BtnUpdate
         '
+        Me.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnUpdate.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnUpdate.Location = New System.Drawing.Point(375, 474)
         Me.BtnUpdate.Name = "BtnUpdate"
@@ -111,6 +113,7 @@ Partial Class Barang
         '
         'BtnHapus
         '
+        Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnHapus.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnHapus.Location = New System.Drawing.Point(481, 474)
         Me.BtnHapus.Name = "BtnHapus"

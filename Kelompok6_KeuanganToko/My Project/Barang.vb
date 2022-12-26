@@ -1,5 +1,5 @@
 ﻿Public Class Barang
-    'Public Shared data_barang = New DataBarang
+    Public Shared data_barang = New DataBarang
     Public Shared selectedDataBarang
     Public Shared selectedTableBarang
     Public Shared selectedTableKoleksiNama
@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-
+        TambahBarang.Show()
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
@@ -34,5 +34,13 @@
 
         selectedTableBarang = selectedRow.Cells(0).Value
         selectedTableKoleksiNama = selectedRow.Cells(1).Value
+    End Sub
+
+    Public Sub ReloadDataTableDatabase()
+        DataGridViewBarang.DataSource = data_barang.GetDataBarangDatabase
+    End Sub
+
+    Private Sub Barang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        ReloadDataTableDatabase()
     End Sub
 End Class
