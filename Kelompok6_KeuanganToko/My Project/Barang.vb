@@ -11,7 +11,7 @@
 
         ' Add any initialization after the InitializeComponent() call.
 
-        Me.CenterToScreen()
+        'Me.CenterToScreen()
 
     End Sub
 
