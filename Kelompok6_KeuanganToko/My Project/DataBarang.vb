@@ -13,10 +13,10 @@ Public Class DataBarang
     Public Shared sqlRead As MySqlDataReader
     Private sqlQuery As String
 
-    Private server As String = "localhost"
-    Private username As String = "root"
-    Private password As String = ""
-    Private database As String = "keuangan_toko"
+    Public Shared server As String = "localhost"
+    Public Shared username As String = "root"
+    Public Shared password As String = ""
+    Public Shared database As String = "keuangan_toko"
 
     Public Property GSNamaBarang() As String
         Get
@@ -97,4 +97,20 @@ Public Class DataBarang
         dbConn.Close()
         Return result
     End Function
+
+    'Public Function GetDataForComboBox() As List(Of String)
+    '    Dim result As New List(Of String)
+
+    '    dbConn.ConnectionString = "server = " + server + "; user id = " + username + "; password = " + password + "; database = " + database + "; Convert Zero Datetime = True"
+    '    dbConn.Open()
+    '    sqlCommand.Connection = dbConn
+    '    sqlCommand.CommandText = "SELECT id_jenis + ', ' + jenis FROM jenis_barang"
+
+    '    sqlRead = sqlCommand.ExecuteReader
+
+    '    result.Add(sqlRead)
+    '    sqlRead.Close()
+    '    dbConn.Close()
+    '    Return result
+    'End Function
 End Class

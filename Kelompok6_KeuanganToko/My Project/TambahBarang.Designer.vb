@@ -153,6 +153,7 @@ Partial Class TambahBarang
         '
         'BtnTambah
         '
+        Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambah.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.Location = New System.Drawing.Point(215, 454)
         Me.BtnTambah.Name = "BtnTambah"
