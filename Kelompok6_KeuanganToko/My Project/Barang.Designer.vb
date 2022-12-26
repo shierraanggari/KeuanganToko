@@ -55,19 +55,19 @@ Partial Class Barang
         'JenisBarangToolStripMenuItem
         '
         Me.JenisBarangToolStripMenuItem.Name = "JenisBarangToolStripMenuItem"
-        Me.JenisBarangToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.JenisBarangToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.JenisBarangToolStripMenuItem.Text = "Jenis Barang"
         '
         'PenjualanToolStripMenuItem
         '
         Me.PenjualanToolStripMenuItem.Name = "PenjualanToolStripMenuItem"
-        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.PenjualanToolStripMenuItem.Text = "Penjualan"
         '
         'BarangMasukToolStripMenuItem
         '
         Me.BarangMasukToolStripMenuItem.Name = "BarangMasukToolStripMenuItem"
-        Me.BarangMasukToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BarangMasukToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.BarangMasukToolStripMenuItem.Text = "Barang Masuk"
         '
         'DataGridViewBarang
@@ -123,7 +123,7 @@ Partial Class Barang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(834, 524)
+        Me.ClientSize = New System.Drawing.Size(834, 521)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnTambah)
