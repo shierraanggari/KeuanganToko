@@ -1,5 +1,7 @@
 ﻿Public Class Barang
-    Public Shared data_barang = New DataBarang
+    'Public Shared data_barang = New DataBarang()
+
+    Public Shared data_barang As DataBarang
     Public Shared selectedDataBarang
     Public Shared selectedTableBarang
     Public Shared selectedTableKoleksiNama
@@ -11,7 +13,9 @@
 
         ' Add any initialization after the InitializeComponent() call.
 
+        data_barang = New DataBarang()
         Me.CenterToScreen()
+        ReloadDataTableDatabase()
 
     End Sub
 

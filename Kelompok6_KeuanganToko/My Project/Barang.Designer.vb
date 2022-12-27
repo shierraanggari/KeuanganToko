@@ -32,6 +32,7 @@ Partial Class Barang
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
+        Me.TESTESTES = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridViewBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -122,11 +123,21 @@ Partial Class Barang
         Me.BtnHapus.Text = "Hapus"
         Me.BtnHapus.UseVisualStyleBackColor = True
         '
+        'TESTESTES
+        '
+        Me.TESTESTES.AutoSize = True
+        Me.TESTESTES.Location = New System.Drawing.Point(643, 40)
+        Me.TESTESTES.Name = "TESTESTES"
+        Me.TESTESTES.Size = New System.Drawing.Size(45, 15)
+        Me.TESTESTES.TabIndex = 18
+        Me.TESTESTES.Text = "Label8"
+        '
         'Barang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(834, 521)
+        Me.Controls.Add(Me.TESTESTES)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnTambah)
@@ -155,4 +166,5 @@ Partial Class Barang
     Friend WithEvents BtnTambah As Button
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnHapus As Button
+    Friend WithEvents TESTESTES As Label
 End Class
