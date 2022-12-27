@@ -1,8 +1,4 @@
-﻿Imports Microsoft.SqlServer
-Imports MySql.Data.MySqlClient
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
-
-Public Class TambahBarang
+﻿Public Class TambahBarang
     Public Sub New()
 
         ' This call is required by the designer.
@@ -42,12 +38,12 @@ Public Class TambahBarang
     'End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Barang.data_barang.GSNamaBarang = TxtNamaBarang.Text.ToString()
-        Barang.data_barang.GSJenisBarang = ComboJenisBarang.SelectedValue().ToString()
+        Barang.data_barang.GSNamaBarang = TxtNamaBarang.Text.ToString
+        Barang.data_barang.GSJenisBarang = ComboJenisBarang.SelectedValue
         Barang.data_barang.GSStok = Integer.Parse(TxtStok.Text)
         Barang.data_barang.GSHarga = Integer.Parse(TxtHarga.Text)
-        Barang.data_barang.GSTanggalMasuk = DatePickTanggalMasuk.Value.ToShortDateString()
-        Barang.data_barang.GSTanggalKadaluarsa = DatePickTanggalKadaluarsa.Value.ToShortDateString()
+        Barang.data_barang.GSTanggalMasuk = DatePickTanggalMasuk.Value.ToShortDateString
+        Barang.data_barang.GSTanggalKadaluarsa = DatePickTanggalKadaluarsa.Value.ToShortDateString
 
         Barang.data_barang.AddDataBarangDatabase(
             Barang.data_barang.GSNamaBarang,
@@ -59,6 +55,8 @@ Public Class TambahBarang
         )
         Me.Close()
     End Sub
+
+
 
     Private Sub TxtStok_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtStok.KeyPress
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then

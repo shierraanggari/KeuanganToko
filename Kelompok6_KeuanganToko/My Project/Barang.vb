@@ -4,7 +4,7 @@
     Public Shared data_barang As DataBarang
     Public Shared selectedDataBarang
     Public Shared selectedTableBarang
-    Public Shared selectedTableKoleksiNama
+    Public Shared selectedTableBarangNama
 
     Public Sub New()
 
@@ -17,6 +17,8 @@
         Me.CenterToScreen()
         ReloadDataTableDatabase()
 
+
+
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
@@ -28,7 +30,8 @@
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-
+        Dim hapusbarang = New HapusBarang()
+        hapusbarang.Show()
     End Sub
 
     Private Sub DataGridViewBarang_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewBarang.CellClick
@@ -37,14 +40,25 @@
         selectedRow = DataGridViewBarang.Rows(index)
 
         selectedTableBarang = selectedRow.Cells(0).Value
-        selectedTableKoleksiNama = selectedRow.Cells(1).Value
+        selectedTableBarangNama = selectedRow.Cells(1).Value
     End Sub
 
     Public Sub ReloadDataTableDatabase()
         DataGridViewBarang.DataSource = data_barang.GetDataBarangDatabase
     End Sub
 
+    Public Sub ReloadDataGS()
+        LblNama.Text = data_barang.GSNamaBarang
+        LblIdJenis.Text = data_barang.GSJenisBarang
+        LblStok.Text = data_barang.GSStok
+        LblHarga.Text = data_barang.GSHarga
+        LblTM.Text = data_barang.GSTanggalMasuk
+        LblTK.Text = data_barang.GSTanggalKadaluarsa
+        'LblIdJenis.Text = data_barang.buat_tes
+    End Sub
+
     Private Sub Barang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
+        ReloadDataGS()
     End Sub
 End Class

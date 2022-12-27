@@ -32,7 +32,12 @@ Partial Class Barang
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
-        Me.TESTESTES = New System.Windows.Forms.Label()
+        Me.LblNama = New System.Windows.Forms.Label()
+        Me.LblIdJenis = New System.Windows.Forms.Label()
+        Me.LblStok = New System.Windows.Forms.Label()
+        Me.LblHarga = New System.Windows.Forms.Label()
+        Me.LblTM = New System.Windows.Forms.Label()
+        Me.LblTK = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridViewBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,7 +47,7 @@ Partial Class Barang
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(834, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(925, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -123,21 +128,71 @@ Partial Class Barang
         Me.BtnHapus.Text = "Hapus"
         Me.BtnHapus.UseVisualStyleBackColor = True
         '
-        'TESTESTES
+        'LblNama
         '
-        Me.TESTESTES.AutoSize = True
-        Me.TESTESTES.Location = New System.Drawing.Point(643, 40)
-        Me.TESTESTES.Name = "TESTESTES"
-        Me.TESTESTES.Size = New System.Drawing.Size(45, 15)
-        Me.TESTESTES.TabIndex = 18
-        Me.TESTESTES.Text = "Label8"
+        Me.LblNama.AutoSize = True
+        Me.LblNama.Location = New System.Drawing.Point(851, 125)
+        Me.LblNama.Name = "LblNama"
+        Me.LblNama.Size = New System.Drawing.Size(45, 15)
+        Me.LblNama.TabIndex = 18
+        Me.LblNama.Text = "Label8"
+        '
+        'LblIdJenis
+        '
+        Me.LblIdJenis.AutoSize = True
+        Me.LblIdJenis.Location = New System.Drawing.Point(851, 158)
+        Me.LblIdJenis.Name = "LblIdJenis"
+        Me.LblIdJenis.Size = New System.Drawing.Size(45, 15)
+        Me.LblIdJenis.TabIndex = 19
+        Me.LblIdJenis.Text = "Label8"
+        '
+        'LblStok
+        '
+        Me.LblStok.AutoSize = True
+        Me.LblStok.Location = New System.Drawing.Point(851, 190)
+        Me.LblStok.Name = "LblStok"
+        Me.LblStok.Size = New System.Drawing.Size(45, 15)
+        Me.LblStok.TabIndex = 20
+        Me.LblStok.Text = "Label8"
+        '
+        'LblHarga
+        '
+        Me.LblHarga.AutoSize = True
+        Me.LblHarga.Location = New System.Drawing.Point(851, 221)
+        Me.LblHarga.Name = "LblHarga"
+        Me.LblHarga.Size = New System.Drawing.Size(45, 15)
+        Me.LblHarga.TabIndex = 21
+        Me.LblHarga.Text = "Label8"
+        '
+        'LblTM
+        '
+        Me.LblTM.AutoSize = True
+        Me.LblTM.Location = New System.Drawing.Point(851, 253)
+        Me.LblTM.Name = "LblTM"
+        Me.LblTM.Size = New System.Drawing.Size(45, 15)
+        Me.LblTM.TabIndex = 22
+        Me.LblTM.Text = "Label8"
+        '
+        'LblTK
+        '
+        Me.LblTK.AutoSize = True
+        Me.LblTK.Location = New System.Drawing.Point(851, 286)
+        Me.LblTK.Name = "LblTK"
+        Me.LblTK.Size = New System.Drawing.Size(45, 15)
+        Me.LblTK.TabIndex = 23
+        Me.LblTK.Text = "Label8"
         '
         'Barang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(834, 521)
-        Me.Controls.Add(Me.TESTESTES)
+        Me.ClientSize = New System.Drawing.Size(925, 521)
+        Me.Controls.Add(Me.LblTK)
+        Me.Controls.Add(Me.LblTM)
+        Me.Controls.Add(Me.LblHarga)
+        Me.Controls.Add(Me.LblStok)
+        Me.Controls.Add(Me.LblIdJenis)
+        Me.Controls.Add(Me.LblNama)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnTambah)
@@ -166,5 +221,10 @@ Partial Class Barang
     Friend WithEvents BtnTambah As Button
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnHapus As Button
-    Friend WithEvents TESTESTES As Label
+    Friend WithEvents LblNama As Label
+    Friend WithEvents LblIdJenis As Label
+    Friend WithEvents LblStok As Label
+    Friend WithEvents LblHarga As Label
+    Friend WithEvents LblTM As Label
+    Friend WithEvents LblTK As Label
 End Class

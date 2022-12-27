@@ -8,6 +8,7 @@ Public Class DataBarang
     Private harga
     Private tanggal_masuk
     Private tanggal_kadaluarsa
+    Public Shared buat_tes
 
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -181,10 +182,81 @@ Public Class DataBarang
         Result.Load(sqlRead)
 
         CBJenis.DataSource = Result
-        CBJenis.DisplayMember = "jenis"
         CBJenis.ValueMember = "id_jenis"
+        CBJenis.DisplayMember = "jenis"
+
+        'buat_tes = CBJenis.SelectedValue
 
         sqlRead.Close()
         dbConn.Close()
+    End Function
+
+    Public Property GSBuatTes() As String
+        Get
+            Return buat_tes
+        End Get
+        Set(value As String)
+            buat_tes = value
+        End Set
+    End Property
+
+    Public Function GetDataBarangByIDDatabase(id_barang As Integer) As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server = " + server + "; user id = " + username +
+            "; password = " + password + "; database = " + database
+
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_barang, 
+                                  id_jenis, 
+                                  nama_barang, 
+                                  stock, 
+                                  harga, 
+                                  tanggal_masuk, 
+                                  tanggal_kadaluarsa
+                                  FROM barang
+                                  WHERE id_barang = '" & id_barang & "'"
+
+        sqlRead = sqlCommand.ExecuteReader
+
+        While sqlRead.Read
+            result.Add(sqlRead.GetString(0).ToString())
+            result.Add(sqlRead.GetString(1).ToString())
+            result.Add(sqlRead.GetString(2).ToString())
+            result.Add(sqlRead.GetString(3).ToString())
+            result.Add(sqlRead.GetString(4).ToString())
+            result.Add(sqlRead.GetString(5).ToString())
+            result.Add(sqlRead.GetString(6).ToString())
+            'result.Add(sqlRead.GetString(7).ToString())
+        End While
+
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+
+    Public Function DeleteDataBarangByIDDatabase(id_barang As Integer)
+        dbConn.ConnectionString = "server = " + server + "; user id = " + username +
+            "; password = " + password + "; database = " + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "DELETE FROM barang WHERE id_barang ='" & id_barang & "'"
+
+            Debug.WriteLine(sqlQuery)
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 End Class
