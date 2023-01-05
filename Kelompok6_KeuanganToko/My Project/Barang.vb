@@ -1,10 +1,13 @@
-﻿Public Class Barang
+﻿Imports Mysqlx.XDevAPI.Relational
+
+Public Class Barang
     'Public Shared data_barang = New DataBarang()
 
     Public Shared data_barang As DataBarang
     Public Shared selectedDataBarang
     Public Shared selectedTableBarang
     Public Shared selectedTableBarangNama
+    'Public Shared kol_nama As DataGridViewColumn
 
     Public Sub New()
 
@@ -17,8 +20,11 @@
         Me.CenterToScreen()
         ReloadDataTableDatabase()
 
+        'kol_nama = DataGridViewBarang.Columns[3];
+        'kol_nama.Width = 60;
 
-
+        'Dim ds
+        'DataGridViewBarang.Columns[3].Width = 60;
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
@@ -60,5 +66,6 @@
     Private Sub Barang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
         ReloadDataGS()
+
     End Sub
 End Class

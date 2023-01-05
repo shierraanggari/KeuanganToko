@@ -1,4 +1,15 @@
-﻿Public Class TambahBarang
+﻿Imports MySql.Data.MySqlClient
+
+Public Class TambahBarang
+
+    Public Shared dbConn As New MySqlConnection
+    Public Shared sqlCommand As New MySqlCommand
+
+    Public Shared server As String = "localhost"
+    Public Shared username As String = "root"
+    Public Shared password As String = ""
+    Public Shared database As String = "keuangan_toko"
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -7,7 +18,7 @@
         ' Add any initialization after the InitializeComponent() call.
 
         Me.CenterToParent()
-        Barang.data_barang.GetDataForComboBox(ComboJenisBarang)
+        'Barang.data_barang.GetDataForComboBox(ComboJenisBarang)
 
         DatePickTanggalMasuk.Format = DateTimePickerFormat.Custom
         DatePickTanggalMasuk.CustomFormat = "yyyy/MM/dd"
@@ -15,27 +26,27 @@
         DatePickTanggalKadaluarsa.CustomFormat = "yyyy/MM/dd"
     End Sub
 
-    'Private Sub GetDataForComboBox()
-    '    Barang.data_barang.dbConn.ConnectionString = "server = " + Barang.data_barang.server +
-    '        "; user id = " + Barang.data_barang.username +
-    '        "; password = " + Barang.data_barang.password +
-    '        "; database = " + Barang.data_barang.database +
-    '        "; Convert Zero Datetime = True"
+    Private Sub TambahBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dbConn.ConnectionString = "server = " + server +
+            "; user id = " + username +
+            "; password = " + password +
+            "; database = " + database
 
-    '    Barang.data_barang.dbConn.Open()
-    '    Barang.data_barang.sqlCommand.Connection = Barang.data_barang.dbConn
-    '    Barang.data_barang.sqlCommand.CommandText = "SELECT id_jenis, jenis FROM jenis_barang"
-    '    Barang.data_barang.sqlRead = Barang.data_barang.sqlCommand.ExecuteReader
+        Dim Result As New DataTable()
 
-    '    While Barang.data_barang.sqlRead.Read
-    '        ComboJenisBarang.Items.Add(Barang.data_barang.sqlRead(0) & ", " & Barang.data_barang.sqlRead(1))
-    '        'ComboJenisBarang.DisplayMember = Barang.data_barang.sqlRead(1)
-    '        ComboJenisBarang.ValueMember = Barang.data_barang.sqlRead(0)
-    '    End While
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT * FROM jenis_barang"
 
-    '    Barang.data_barang.sqlRead.Close()
-    '    Barang.data_barang.dbConn.Close()
-    'End Sub
+        Dim adapter As New MySqlDataAdapter(sqlCommand)
+
+        adapter.Fill(Result)
+
+        ComboJenisBarang.DataSource = Result
+        ComboJenisBarang.DisplayMember = "jenis"
+        ComboJenisBarang.ValueMember = "id_jenis"
+
+    End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Barang.data_barang.GSNamaBarang = TxtNamaBarang.Text.ToString
@@ -71,4 +82,5 @@
             MessageBox.Show("Mohon hanya memasukkan angka.")
         End If
     End Sub
+
 End Class

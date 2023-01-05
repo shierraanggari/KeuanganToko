@@ -165,31 +165,31 @@ Public Class DataBarang
     '    dbConn.Close()
     'End Function
 
-    Public Function GetDataForComboBox(CBJenis) As DataTable
-        Dim Result As New DataTable
+    'Public Function GetDataForComboBox(CBJenis) As DataTable
+    '    Dim Result As New DataTable
 
-        dbConn.ConnectionString = "server = " + server +
-            "; user id = " + username +
-            "; password = " + password +
-            "; database = " + database +
-            "; Convert Zero Datetime = True"
+    '    dbConn.ConnectionString = "server = " + server +
+    '        "; user id = " + username +
+    '        "; password = " + password +
+    '        "; database = " + database +
+    '        "; Convert Zero Datetime = True"
 
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis, jenis FROM jenis_barang"
-        sqlRead = sqlCommand.ExecuteReader
+    '    dbConn.Open()
+    '    sqlCommand.Connection = dbConn
+    '    sqlCommand.CommandText = "SELECT id_jenis, jenis FROM jenis_barang"
+    '    sqlRead = sqlCommand.ExecuteReader
 
-        Result.Load(sqlRead)
+    '    Result.Load(sqlRead)
 
-        CBJenis.DataSource = Result
-        CBJenis.ValueMember = "id_jenis"
-        CBJenis.DisplayMember = "jenis"
+    '    CBJenis.DataSource = Result
+    '    CBJenis.ValueMember = "id_jenis"
+    '    CBJenis.DisplayMember = "jenis"
 
-        'buat_tes = CBJenis.SelectedValue
+    '    'buat_tes = CBJenis.SelectedValue
 
-        sqlRead.Close()
-        dbConn.Close()
-    End Function
+    '    sqlRead.Close()
+    '    dbConn.Close()
+    'End Function
 
     Public Property GSBuatTes() As String
         Get
@@ -234,6 +234,44 @@ Public Class DataBarang
         sqlRead.Close()
         dbConn.Close()
         Return result
+    End Function
+
+    Public Function UpdateDataBarangByIDDatabase(id_barang As Integer,
+                                                 nama_barang As String,
+                                                 jenis_barang As String,
+                                                 stok As String,
+                                                 harga As String,
+                                                 tanggal_masuk As Date,
+                                                 tanggal_kadaluarsa As Date)
+        tanggal_masuk = tanggal_masuk.ToString()
+        tanggal_kadaluarsa = tanggal_kadaluarsa.ToString()
+
+        dbConn.ConnectionString = "server = " + server + "; user id = " + username +
+            "; password = " + password + "; database = " + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "UPDATE barang SET " &
+                       "nama_barang = '" & nama_barang & "', " &
+                       "id_jenis = '" & jenis_barang & "', " &
+                       "stock = '" & stok & "', " &
+                       "harga = '" & harga & "', " &
+                       "tanggal_masuk = '" & tanggal_masuk & "', " &
+                       "tanggal_kadaluarsa = '" & tanggal_kadaluarsa & "' " &
+                       "WHERE id_barang = '" & id_barang & "'"
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 
     Public Function DeleteDataBarangByIDDatabase(id_barang As Integer)
