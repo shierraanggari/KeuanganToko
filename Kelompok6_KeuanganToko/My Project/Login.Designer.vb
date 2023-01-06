@@ -27,6 +27,7 @@ Partial Class Login
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnLogin = New System.Windows.Forms.Button()
+        Me.LblDaftar = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TxtUnameEmail
@@ -72,11 +73,22 @@ Partial Class Login
         Me.BtnLogin.Text = "Login"
         Me.BtnLogin.UseVisualStyleBackColor = True
         '
+        'LblDaftar
+        '
+        Me.LblDaftar.AutoSize = True
+        Me.LblDaftar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LblDaftar.Location = New System.Drawing.Point(296, 463)
+        Me.LblDaftar.Name = "LblDaftar"
+        Me.LblDaftar.Size = New System.Drawing.Size(41, 16)
+        Me.LblDaftar.TabIndex = 18
+        Me.LblDaftar.Text = "Daftar"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(544, 556)
+        Me.Controls.Add(Me.LblDaftar)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -95,4 +107,5 @@ Partial Class Login
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BtnLogin As Button
+    Friend WithEvents LblDaftar As Label
 End Class

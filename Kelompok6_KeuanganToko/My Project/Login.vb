@@ -2,6 +2,7 @@
 
     Public Shared data_user As DataUsers
 
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -32,5 +33,10 @@
         Else
             MessageBox.Show("Wrong password.")
         End If
+    End Sub
+
+    Private Sub LblDaftar_Click(sender As Object, e As EventArgs) Handles LblDaftar.Click
+        Dim daftar = New Daftar
+        daftar.Show()
     End Sub
 End Class

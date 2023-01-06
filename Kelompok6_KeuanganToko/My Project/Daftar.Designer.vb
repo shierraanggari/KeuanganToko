@@ -83,7 +83,7 @@ Partial Class Daftar
         '
         Me.BtnDaftar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnDaftar.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnDaftar.Location = New System.Drawing.Point(189, 427)
+        Me.BtnDaftar.Location = New System.Drawing.Point(195, 378)
         Me.BtnDaftar.Name = "BtnDaftar"
         Me.BtnDaftar.Size = New System.Drawing.Size(130, 40)
         Me.BtnDaftar.TabIndex = 22

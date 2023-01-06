@@ -58,7 +58,7 @@ Public Class DataUsers
             sqlQuery = "INSERT INTO users (username, email, password) VALUE ('" &
                 uname_regist & "', '" &
                 email_regist & "', '" &
-                password_regist & "')"
+                EncryptMD5(password_regist) & "')"
 
             Debug.WriteLine(sqlQuery)
 
@@ -117,11 +117,11 @@ Public Class DataUsers
             If login_email = True Then
                 queryAuth = "SELECT id_users, username FROM users " &
                             "WHERE email = '" & uname_email_login &
-                            "' AND password = '" & password_login & "'"
+                            "' AND password = '" & EncryptMD5(password_login) & "'"
             Else
                 queryAuth = "SELECT id_users, username FROM users " &
                             "WHERE username = '" & uname_email_login &
-                            "' AND password = '" & password_login & "'"
+                            "' AND password = '" & EncryptMD5(password_login) & "'"
             End If
 
             sqlCommand.CommandText = queryAuth

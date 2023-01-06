@@ -53,19 +53,7 @@ Public Class Barang
         DataGridViewBarang.DataSource = data_barang.GetDataBarangDatabase
     End Sub
 
-    Public Sub ReloadDataGS()
-        LblNama.Text = data_barang.GSNamaBarang
-        LblIdJenis.Text = data_barang.GSJenisBarang
-        LblStok.Text = data_barang.GSStok
-        LblHarga.Text = data_barang.GSHarga
-        LblTM.Text = data_barang.GSTanggalMasuk
-        LblTK.Text = data_barang.GSTanggalKadaluarsa
-        'LblIdJenis.Text = data_barang.buat_tes
-    End Sub
-
     Private Sub Barang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
-        ReloadDataGS()
-
     End Sub
 End Class
