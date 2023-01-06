@@ -34,7 +34,7 @@ Public Class DataBarang
             Return jenis_barang
         End Get
         Set(value As String)
-            value = jenis_barang
+            jenis_barang = value
         End Set
     End Property
 
@@ -143,63 +143,6 @@ Public Class DataBarang
         End Try
     End Function
 
-    'Public Function GetDataForComboBox(CBJenis)
-    '    dbConn.ConnectionString = "server = " + server +
-    '        "; user id = " + username +
-    '        "; password = " + password +
-    '        "; database = " + database +
-    '        "; Convert Zero Datetime = True"
-
-    '    dbConn.Open()
-    '    sqlCommand.Connection = dbConn
-    '    sqlCommand.CommandText = "SELECT id_jenis, jenis FROM jenis_barang"
-    '    sqlRead = sqlCommand.ExecuteReader
-
-    '    While sqlRead.Read
-    '        CBJenis.Items.Add(sqlRead(0))
-    '        'CBJenis.DisplayMember = sqlRead(1)
-    '        'CBJenis.ValueMember = sqlRead(0)
-    '    End While
-
-    '    sqlRead.Close()
-    '    dbConn.Close()
-    'End Function
-
-    'Public Function GetDataForComboBox(CBJenis) As DataTable
-    '    Dim Result As New DataTable
-
-    '    dbConn.ConnectionString = "server = " + server +
-    '        "; user id = " + username +
-    '        "; password = " + password +
-    '        "; database = " + database +
-    '        "; Convert Zero Datetime = True"
-
-    '    dbConn.Open()
-    '    sqlCommand.Connection = dbConn
-    '    sqlCommand.CommandText = "SELECT id_jenis, jenis FROM jenis_barang"
-    '    sqlRead = sqlCommand.ExecuteReader
-
-    '    Result.Load(sqlRead)
-
-    '    CBJenis.DataSource = Result
-    '    CBJenis.ValueMember = "id_jenis"
-    '    CBJenis.DisplayMember = "jenis"
-
-    '    'buat_tes = CBJenis.SelectedValue
-
-    '    sqlRead.Close()
-    '    dbConn.Close()
-    'End Function
-
-    Public Property GSBuatTes() As String
-        Get
-            Return buat_tes
-        End Get
-        Set(value As String)
-            buat_tes = value
-        End Set
-    End Property
-
     Public Function GetDataBarangByIDDatabase(id_barang As Integer) As List(Of String)
         Dim result As New List(Of String)
 
@@ -228,7 +171,6 @@ Public Class DataBarang
             result.Add(sqlRead.GetString(4).ToString())
             result.Add(sqlRead.GetString(5).ToString())
             result.Add(sqlRead.GetString(6).ToString())
-            'result.Add(sqlRead.GetString(7).ToString())
         End While
 
         sqlRead.Close()

@@ -45,12 +45,12 @@ Public Class TambahBarang
         ComboJenisBarang.DataSource = Result
         ComboJenisBarang.DisplayMember = "jenis"
         ComboJenisBarang.ValueMember = "id_jenis"
-
     End Sub
+
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Barang.data_barang.GSNamaBarang = TxtNamaBarang.Text.ToString
-        Barang.data_barang.GSJenisBarang = ComboJenisBarang.SelectedValue
+        Barang.data_barang.GSJenisBarang = ComboJenisBarang.SelectedValue().ToString
         Barang.data_barang.GSStok = Integer.Parse(TxtStok.Text)
         Barang.data_barang.GSHarga = Integer.Parse(TxtHarga.Text)
         Barang.data_barang.GSTanggalMasuk = DatePickTanggalMasuk.Value.ToShortDateString
@@ -82,5 +82,4 @@ Public Class TambahBarang
             MessageBox.Show("Mohon hanya memasukkan angka.")
         End If
     End Sub
-
 End Class
