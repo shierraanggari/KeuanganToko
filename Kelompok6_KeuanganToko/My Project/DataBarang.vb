@@ -151,9 +151,9 @@ Public Class DataBarang
 
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_barang, 
-                                  id_jenis, 
+        sqlCommand.CommandText = "SELECT id_barang,
                                   nama_barang, 
+                                  id_jenis,
                                   stock, 
                                   harga, 
                                   tanggal_masuk, 
@@ -183,10 +183,8 @@ Public Class DataBarang
                                                  jenis_barang As String,
                                                  stok As String,
                                                  harga As String,
-                                                 tanggal_masuk As Date,
-                                                 tanggal_kadaluarsa As Date)
-        tanggal_masuk = tanggal_masuk.ToString()
-        tanggal_kadaluarsa = tanggal_kadaluarsa.ToString()
+                                                 tanggal_masuk As String,
+                                                 tanggal_kadaluarsa As String)
 
         dbConn.ConnectionString = "server = " + server + "; user id = " + username +
             "; password = " + password + "; database = " + database

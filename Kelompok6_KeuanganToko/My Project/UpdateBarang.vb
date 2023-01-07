@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class TambahBarang
+Public Class UpdateBarang
 
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -16,17 +16,21 @@ Public Class TambahBarang
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
         Me.CenterToScreen()
-        'Barang.data_barang.GetDataForComboBox(ComboJenisBarang)
 
         DatePickTanggalMasuk.Format = DateTimePickerFormat.Custom
         DatePickTanggalMasuk.CustomFormat = "yyyy/MM/dd"
         DatePickTanggalKadaluarsa.Format = DateTimePickerFormat.Custom
         DatePickTanggalKadaluarsa.CustomFormat = "yyyy/MM/dd"
+
+        TxtNamaBarang.Text = Barang.data_barang.GSNamaBarang
+        TxtStok.Text = Barang.data_barang.GSStok
+        TxtHarga.Text = Barang.data_barang.GSHarga
+        DatePickTanggalMasuk.Text = Barang.data_barang.GSTanggalMasuk
+        DatePickTanggalKadaluarsa.Text = Barang.data_barang.GSTanggalKadaluarsa
     End Sub
 
-    Private Sub TambahBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub UpdateBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dbConn.ConnectionString = "server = " + server +
             "; user id = " + username +
             "; password = " + password +
@@ -46,42 +50,28 @@ Public Class TambahBarang
         ComboJenisBarang.DisplayMember = "jenis"
         ComboJenisBarang.ValueMember = "id_jenis"
 
+        ComboJenisBarang.SelectedValue = Barang.data_barang.GSJenisBarang
+
         dbConn.Close()
     End Sub
 
-
-    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         Barang.data_barang.GSNamaBarang = TxtNamaBarang.Text.ToString
         Barang.data_barang.GSJenisBarang = ComboJenisBarang.SelectedValue().ToString
         Barang.data_barang.GSStok = Integer.Parse(TxtStok.Text)
         Barang.data_barang.GSHarga = Integer.Parse(TxtHarga.Text)
-        Barang.data_barang.GSTanggalMasuk = DatePickTanggalMasuk.Value.ToShortDateString
-        Barang.data_barang.GSTanggalKadaluarsa = DatePickTanggalKadaluarsa.Value.ToShortDateString
+        Barang.data_barang.GSTanggalMasuk = DatePickTanggalMasuk.Value.ToString("yyyy/MM/dd")
+        Barang.data_barang.GSTanggalKadaluarsa = DatePickTanggalKadaluarsa.Value.ToString("yyyy/MM/dd")
 
-        Barang.data_barang.AddDataBarangDatabase(
-            Barang.data_barang.GSNamaBarang,
-            Barang.data_barang.GSJenisBarang,
-            Barang.data_barang.GSStok,
-            Barang.data_barang.GSHarga,
-            Barang.data_barang.GSTanggalMasuk,
-            Barang.data_barang.GSTanggalKadaluarsa
-        )
+        Barang.data_barang.UpdateDataBarangByIDDatabase(Barang.selectedTableBarang,
+                                                        Barang.data_barang.GSNamaBarang,
+                                                        Barang.data_barang.GSJenisBarang,
+                                                        Barang.data_barang.GSStok,
+                                                        Barang.data_barang.GSHarga,
+                                                        Barang.data_barang.GSTanggalMasuk,
+                                                        Barang.data_barang.GSTanggalKadaluarsa)
+
         Me.Close()
     End Sub
 
-
-
-    Private Sub TxtStok_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtStok.KeyPress
-        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
-            e.Handled = True
-            MessageBox.Show("Mohon hanya memasukkan angka.")
-        End If
-    End Sub
-
-    Private Sub TxtHarga_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtHarga.KeyPress
-        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
-            e.Handled = True
-            MessageBox.Show("Mohon hanya memasukkan angka.")
-        End If
-    End Sub
 End Class
