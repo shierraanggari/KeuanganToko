@@ -18,4 +18,8 @@
             MessageBox.Show("Please fill username, email, and password.")
         End If
     End Sub
+
+    Private Sub LblMasuk_Click(sender As Object, e As EventArgs) Handles LblMasuk.Click
+        Me.Close()
+    End Sub
 End Class

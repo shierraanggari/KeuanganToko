@@ -16,9 +16,8 @@ Public Class TambahBarang
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
         Me.CenterToScreen()
-        'Barang.data_barang.GetDataForComboBox(ComboJenisBarang)
+        NamaToolStripMenuItem.Text = Login.data_user.GSUsername
 
         DatePickTanggalMasuk.Format = DateTimePickerFormat.Custom
         DatePickTanggalMasuk.CustomFormat = "yyyy/MM/dd"
@@ -69,8 +68,6 @@ Public Class TambahBarang
         Me.Close()
     End Sub
 
-
-
     Private Sub TxtStok_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtStok.KeyPress
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -83,5 +80,9 @@ Public Class TambahBarang
             e.Handled = True
             MessageBox.Show("Mohon hanya memasukkan angka.")
         End If
+    End Sub
+
+    Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles BtnBatal.Click
+        Me.Close()
     End Sub
 End Class

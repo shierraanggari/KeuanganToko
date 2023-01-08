@@ -1,4 +1,4 @@
-﻿Imports Mysqlx.XDevAPI.Relational
+﻿Imports System.ComponentModel
 
 Public Class Barang
     'Public Shared data_barang = New DataBarang()
@@ -15,15 +15,16 @@ Public Class Barang
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        Me.CenterToScreen()
 
         data_barang = New DataBarang()
-
-        Me.CenterToScreen()
-        ReloadDataTableDatabase()
         NamaToolStripMenuItem.Text = Login.data_user.GSUsername
 
-        'kol_nama = DataGridViewBarang.Columns[3];
-        'kol_nama.Width = 60;
+        ReloadDataTableDatabase()
+        DataGridViewProperties()
+
+        'Dim kol_nama = DataGridViewBarang.Columns["Nama Barang"].FillWeight
+        'kol_nama = 60
 
         'Dim ds
         'DataGridViewBarang.Columns[3].Width = 60;
@@ -83,5 +84,24 @@ Public Class Barang
         DataGridViewBarang.ClearSelection()
         BtnUpdate.Hide()
         BtnHapus.Hide()
+    End Sub
+
+    Private Sub DataGridViewProperties()
+        With DataGridViewBarang.DefaultCellStyle
+            .Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Font = New Font("Arial", 9, FontStyle.Regular)
+        End With
+
+        With DataGridViewBarang.ColumnHeadersDefaultCellStyle
+            .Alignment = DataGridViewContentAlignment.MiddleLeft
+            .Font = New Font("Arial", 9, FontStyle.Bold)
+        End With
+
+        With DataGridViewBarang.Columns("Nama Barang")
+            .Width = 180
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        End With
+
+        DataGridViewBarang.Columns("ID Barang").Width = 80
     End Sub
 End Class

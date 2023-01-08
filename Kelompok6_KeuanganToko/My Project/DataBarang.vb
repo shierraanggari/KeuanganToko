@@ -80,26 +80,18 @@ Public Class DataBarang
         dbConn.ConnectionString = "server = " + server + "; user id = " + username + "; password = " + password + "; database = " + database + "; Convert Zero Datetime = True"
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        'sqlCommand.CommandText = "SELECT id_barang AS 'ID Barang',
-        '                          id_jenis AS 'ID Jenis',
-        '                          nama_barang AS 'Nama Barang',
-        '                          stock AS 'Stok' FROM barang;
-        '                          SELECT
-        '                          harga AS 'Harga',
-        '                          tanggal_masuk AS 'Tanggal Masuk',
-        '                          tanggal_kadaluarsa AS 'Tanggal Kadaluarsa'
-        '                          FROM barang;"
 
         sqlCommand.CommandText = "SELECT id_barang AS 'ID Barang',
                                   nama_barang AS 'Nama Barang',
                                   jenis AS 'Jenis Barang',
                                   stock AS 'Stok',
-                                  harga AS 'Harga',
+                                  CONCAT('Rp', FORMAT(harga, 0, 'id_ID')) AS 'Harga',
                                   tanggal_masuk AS 'Tanggal Masuk',
                                   tanggal_kadaluarsa AS 'Tanggal Kadaluarsa'
                                   FROM barang
                                   INNER JOIN jenis_barang
-                                  ON barang.id_jenis = jenis_barang.id_jenis"
+                                  ON barang.id_jenis = jenis_barang.id_jenis
+                                  ORDER BY id_barang"
 
         sqlRead = sqlCommand.ExecuteReader
 

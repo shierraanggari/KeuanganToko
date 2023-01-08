@@ -17,6 +17,7 @@ Public Class UpdateBarang
 
         ' Add any initialization after the InitializeComponent() call.
         Me.CenterToScreen()
+        NamaToolStripMenuItem.Text = Login.data_user.GSUsername
 
         DatePickTanggalMasuk.Format = DateTimePickerFormat.Custom
         DatePickTanggalMasuk.CustomFormat = "yyyy/MM/dd"
@@ -74,4 +75,7 @@ Public Class UpdateBarang
         Me.Close()
     End Sub
 
+    Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles BtnBatal.Click
+        Me.Close()
+    End Sub
 End Class
