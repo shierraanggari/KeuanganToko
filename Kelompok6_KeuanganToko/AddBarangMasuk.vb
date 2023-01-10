@@ -18,7 +18,7 @@
 
     Private Sub BTNTambah_Click(sender As Object, e As EventArgs) Handles BTNTambah.Click
 
-        If String.IsNullOrEmpty(CBNamaBarang.Text) And NumberQTY.Value > 0 Then
+        If NumberQTY.Value > 0 Then
 
             'menyimpan item combobox yang dipilih ke variable barangId
             Dim barangId = CBNamaBarang.SelectedValue()
@@ -43,6 +43,10 @@
         Else
             MessageBox.Show("Data form perlu diisi")
         End If
+
+    End Sub
+
+    Private Sub AddBarangMasuk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

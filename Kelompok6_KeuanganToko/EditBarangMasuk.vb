@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub BTNEdit_Click(sender As Object, e As EventArgs) Handles BTNEdit.Click
-        If String.IsNullOrEmpty(CBNamaBarang.Text) And NumberQTY.Value > 0 Then
+        If NumberQTY.Value > 0 Then
             Dim idBarangMasuk = MainBarangMasuk.barangMasuk.GSId
             Dim newNama = CBNamaBarang.SelectedValue
             Dim newDate = DTMasuk.Value.ToString("yyyy-MM-dd")
@@ -43,5 +43,7 @@
         End If
     End Sub
 
+    Private Sub EditBarangMasuk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
