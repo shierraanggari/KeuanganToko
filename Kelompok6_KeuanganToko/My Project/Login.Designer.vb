@@ -22,6 +22,7 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.TxtUnameEmail = New System.Windows.Forms.TextBox()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,6 +31,8 @@ Partial Class Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PicPassword = New System.Windows.Forms.PictureBox()
+        CType(Me.PicPassword, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TxtUnameEmail
@@ -44,6 +47,7 @@ Partial Class Login
         '
         Me.TxtPassword.Location = New System.Drawing.Point(39, 225)
         Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.TxtPassword.PlaceholderText = "Masukkan password Anda"
         Me.TxtPassword.Size = New System.Drawing.Size(451, 22)
         Me.TxtPassword.TabIndex = 12
@@ -116,11 +120,23 @@ Partial Class Login
         Me.Label4.TabIndex = 38
         Me.Label4.Text = "Belum punya akun?"
         '
+        'PicPassword
+        '
+        Me.PicPassword.BackgroundImage = CType(resources.GetObject("PicPassword.BackgroundImage"), System.Drawing.Image)
+        Me.PicPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PicPassword.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PicPassword.Location = New System.Drawing.Point(496, 225)
+        Me.PicPassword.Name = "PicPassword"
+        Me.PicPassword.Size = New System.Drawing.Size(22, 22)
+        Me.PicPassword.TabIndex = 39
+        Me.PicPassword.TabStop = False
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(544, 461)
+        Me.Controls.Add(Me.PicPassword)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.Label3)
@@ -132,6 +148,7 @@ Partial Class Login
         Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Name = "Login"
         Me.Text = "Login"
+        CType(Me.PicPassword, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,4 +162,5 @@ Partial Class Login
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnLogin As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents PicPassword As PictureBox
 End Class

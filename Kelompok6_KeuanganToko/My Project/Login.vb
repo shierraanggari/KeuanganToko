@@ -12,6 +12,7 @@
         Me.CenterToScreen()
 
         data_user = New DataUsers()
+        TxtPassword.PasswordChar = "•"
     End Sub
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
@@ -38,5 +39,13 @@
     Private Sub LblDaftar_Click(sender As Object, e As EventArgs) Handles LblDaftar.Click
         Dim daftar = New Daftar
         daftar.Show()
+    End Sub
+
+    Private Sub PicPassword_Click(sender As Object, e As EventArgs) Handles PicPassword.Click
+        If TxtPassword.PasswordChar = "•" Then
+            TxtPassword.PasswordChar = ""
+        Else
+            TxtPassword.PasswordChar = "•"
+        End If
     End Sub
 End Class
