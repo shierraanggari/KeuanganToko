@@ -25,6 +25,8 @@ Partial Class FormUpdateJenisBarang
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtUpdateJenis = New System.Windows.Forms.TextBox()
         Me.BtnUpdateJenis = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblVarID = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -39,25 +41,45 @@ Partial Class FormUpdateJenisBarang
         '
         'TxtUpdateJenis
         '
-        Me.TxtUpdateJenis.Location = New System.Drawing.Point(15, 51)
+        Me.TxtUpdateJenis.Location = New System.Drawing.Point(12, 76)
         Me.TxtUpdateJenis.Name = "TxtUpdateJenis"
         Me.TxtUpdateJenis.Size = New System.Drawing.Size(210, 23)
         Me.TxtUpdateJenis.TabIndex = 1
         '
         'BtnUpdateJenis
         '
-        Me.BtnUpdateJenis.Location = New System.Drawing.Point(15, 89)
+        Me.BtnUpdateJenis.Location = New System.Drawing.Point(15, 116)
         Me.BtnUpdateJenis.Name = "BtnUpdateJenis"
         Me.BtnUpdateJenis.Size = New System.Drawing.Size(64, 24)
         Me.BtnUpdateJenis.TabIndex = 2
         Me.BtnUpdateJenis.Text = "Update"
         Me.BtnUpdateJenis.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 50)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(92, 15)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "ID Jenis Barang :"
+        '
+        'LblVarID
+        '
+        Me.LblVarID.AutoSize = True
+        Me.LblVarID.Location = New System.Drawing.Point(110, 50)
+        Me.LblVarID.Name = "LblVarID"
+        Me.LblVarID.Size = New System.Drawing.Size(18, 15)
+        Me.LblVarID.TabIndex = 4
+        Me.LblVarID.Text = "ID"
+        '
         'FormUpdateJenisBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(249, 125)
+        Me.ClientSize = New System.Drawing.Size(249, 152)
+        Me.Controls.Add(Me.LblVarID)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnUpdateJenis)
         Me.Controls.Add(Me.TxtUpdateJenis)
         Me.Controls.Add(Me.Label1)
@@ -71,4 +93,6 @@ Partial Class FormUpdateJenisBarang
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtUpdateJenis As TextBox
     Friend WithEvents BtnUpdateJenis As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents LblVarID As Label
 End Class

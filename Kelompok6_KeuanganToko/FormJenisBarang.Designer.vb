@@ -61,11 +61,14 @@ Partial Class FormJenisBarang
         '
         Me.GridJenisBarang.AllowUserToAddRows = False
         Me.GridJenisBarang.AllowUserToDeleteRows = False
+        Me.GridJenisBarang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.GridJenisBarang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.GridJenisBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GridJenisBarang.Location = New System.Drawing.Point(12, 58)
         Me.GridJenisBarang.Name = "GridJenisBarang"
         Me.GridJenisBarang.ReadOnly = True
         Me.GridJenisBarang.RowTemplate.Height = 25
+        Me.GridJenisBarang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.GridJenisBarang.Size = New System.Drawing.Size(776, 175)
         Me.GridJenisBarang.TabIndex = 3
         '
