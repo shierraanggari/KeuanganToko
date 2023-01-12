@@ -19,20 +19,22 @@
         Dim plainUnameEmail As String = TxtUnameEmail.Text
         Dim plainPassword As String = TxtPassword.Text
 
-        Dim users As List(Of String)
+        Dim datauser As List(Of String)
 
         If plainUnameEmail.Contains("@"c) Then
-            users = data_user.CheckAuthDatabase(plainUnameEmail, plainPassword, True)
+            datauser = data_user.CheckAuthDatabase(plainUnameEmail, plainPassword, True)
         Else
-            users = data_user.CheckAuthDatabase(plainUnameEmail, plainPassword, False)
+            datauser = data_user.CheckAuthDatabase(plainUnameEmail, plainPassword, False)
         End If
 
-        If users.Count > 0 Then
-            data_user.GSUsername = users(1)
+        'MessageBox.Show(plainUnameEmail + plainPassword + datauser(0) + datauser(1))
+
+        If datauser.Count > 0 Then
+            data_user.GSUsername = datauser(1)
             Barang.Show()
             Me.Hide()
         Else
-            MessageBox.Show("Wrong password.")
+            MessageBox.Show("wrong password.")
         End If
     End Sub
 

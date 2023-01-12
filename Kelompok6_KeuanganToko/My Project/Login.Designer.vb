@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.TxtUnameEmail = New System.Windows.Forms.TextBox()
@@ -47,7 +47,6 @@ Partial Class Login
         '
         Me.TxtPassword.Location = New System.Drawing.Point(39, 225)
         Me.TxtPassword.Name = "TxtPassword"
-        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.TxtPassword.PlaceholderText = "Masukkan password Anda"
         Me.TxtPassword.Size = New System.Drawing.Size(451, 22)
         Me.TxtPassword.TabIndex = 12
@@ -124,7 +123,6 @@ Partial Class Login
         '
         Me.PicPassword.BackgroundImage = CType(resources.GetObject("PicPassword.BackgroundImage"), System.Drawing.Image)
         Me.PicPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PicPassword.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PicPassword.Location = New System.Drawing.Point(496, 225)
         Me.PicPassword.Name = "PicPassword"
         Me.PicPassword.Size = New System.Drawing.Size(22, 22)

@@ -104,4 +104,16 @@ Public Class Barang
 
         DataGridViewBarang.Columns("ID Barang").Width = 80
     End Sub
+
+    Private Sub ToolStripMenuJenisBarang_Click(sender As Object, e As EventArgs) Handles ToolStripMenuJenisBarang.Click
+
+    End Sub
+
+    Private Sub ToolStripMenuPenjualan_Click(sender As Object, e As EventArgs) Handles ToolStripMenuPenjualan.Click
+
+    End Sub
+
+    Private Sub ToolStripMenuBarangMasuk_Click(sender As Object, e As EventArgs) Handles ToolStripMenuBarangMasuk.Click
+
+    End Sub
 End Class

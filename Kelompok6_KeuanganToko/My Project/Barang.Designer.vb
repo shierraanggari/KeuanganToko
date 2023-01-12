@@ -24,9 +24,9 @@ Partial Class Barang
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Barang))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuBarangMasuk = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuPenjualan = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuJenisBarang = New System.Windows.Forms.ToolStripMenuItem()
         Me.NamaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridViewBarang = New System.Windows.Forms.DataGridView()
@@ -48,7 +48,7 @@ Partial Class Barang
         Me.MenuStrip1.BackColor = System.Drawing.Color.MidnightBlue
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.NamaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuBarangMasuk, Me.ToolStripMenuPenjualan, Me.ToolStripMenuJenisBarang, Me.NamaToolStripMenuItem})
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -57,39 +57,39 @@ Partial Class Barang
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ToolStripMenuItem1
+        'ToolStripMenuBarangMasuk
         '
-        Me.ToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripMenuItem1.AutoSize = False
-        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.ToolStripMenuItem1.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(122, 30)
-        Me.ToolStripMenuItem1.Text = "Barang Masuk"
+        Me.ToolStripMenuBarangMasuk.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripMenuBarangMasuk.AutoSize = False
+        Me.ToolStripMenuBarangMasuk.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStripMenuBarangMasuk.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ToolStripMenuBarangMasuk.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.ToolStripMenuBarangMasuk.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.ToolStripMenuBarangMasuk.Name = "ToolStripMenuBarangMasuk"
+        Me.ToolStripMenuBarangMasuk.Size = New System.Drawing.Size(122, 30)
+        Me.ToolStripMenuBarangMasuk.Text = "Barang Masuk"
         '
-        'ToolStripMenuItem2
+        'ToolStripMenuPenjualan
         '
-        Me.ToolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripMenuItem2.AutoSize = False
-        Me.ToolStripMenuItem2.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ToolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(122, 30)
-        Me.ToolStripMenuItem2.Text = "Penjualan"
+        Me.ToolStripMenuPenjualan.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripMenuPenjualan.AutoSize = False
+        Me.ToolStripMenuPenjualan.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStripMenuPenjualan.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ToolStripMenuPenjualan.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.ToolStripMenuPenjualan.Name = "ToolStripMenuPenjualan"
+        Me.ToolStripMenuPenjualan.Size = New System.Drawing.Size(122, 30)
+        Me.ToolStripMenuPenjualan.Text = "Penjualan"
         '
-        'ToolStripMenuItem3
+        'ToolStripMenuJenisBarang
         '
-        Me.ToolStripMenuItem3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripMenuItem3.AutoSize = False
-        Me.ToolStripMenuItem3.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ToolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(122, 30)
-        Me.ToolStripMenuItem3.Text = "Jenis Barang"
+        Me.ToolStripMenuJenisBarang.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripMenuJenisBarang.AutoSize = False
+        Me.ToolStripMenuJenisBarang.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStripMenuJenisBarang.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ToolStripMenuJenisBarang.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.ToolStripMenuJenisBarang.Name = "ToolStripMenuJenisBarang"
+        Me.ToolStripMenuJenisBarang.Size = New System.Drawing.Size(122, 30)
+        Me.ToolStripMenuJenisBarang.Text = "Jenis Barang"
         '
         'NamaToolStripMenuItem
         '
@@ -210,7 +210,7 @@ Partial Class Barang
     End Sub
 
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuBarangMasuk As ToolStripMenuItem
     Friend WithEvents DataGridViewBarang As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnTambah As Button
@@ -218,6 +218,6 @@ Partial Class Barang
     Friend WithEvents BtnHapus As Button
     Friend WithEvents NamaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuJenisBarang As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuPenjualan As ToolStripMenuItem
 End Class
