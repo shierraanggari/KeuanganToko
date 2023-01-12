@@ -41,7 +41,7 @@
         daftar.Show()
     End Sub
 
-    Private Sub PicPassword_Click(sender As Object, e As EventArgs) Handles PicPassword.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If TxtPassword.PasswordChar = "•" Then
             TxtPassword.PasswordChar = ""
         Else

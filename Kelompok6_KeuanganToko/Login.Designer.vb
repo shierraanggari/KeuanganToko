@@ -31,8 +31,8 @@ Partial Class Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PicPassword = New System.Windows.Forms.PictureBox()
-        CType(Me.PicPassword, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TxtUnameEmail
@@ -75,11 +75,11 @@ Partial Class Login
         '
         Me.LblDaftar.AutoSize = True
         Me.LblDaftar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LblDaftar.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.LblDaftar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LblDaftar.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.LblDaftar.Location = New System.Drawing.Point(293, 379)
+        Me.LblDaftar.Location = New System.Drawing.Point(297, 379)
         Me.LblDaftar.Name = "LblDaftar"
-        Me.LblDaftar.Size = New System.Drawing.Size(51, 19)
+        Me.LblDaftar.Size = New System.Drawing.Size(49, 16)
         Me.LblDaftar.TabIndex = 18
         Me.LblDaftar.Text = "Daftar"
         '
@@ -100,7 +100,7 @@ Partial Class Login
         Me.BtnLogin.BackColor = System.Drawing.Color.MidnightBlue
         Me.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLogin.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnLogin.ForeColor = System.Drawing.Color.Transparent
         Me.BtnLogin.Location = New System.Drawing.Point(39, 311)
         Me.BtnLogin.Name = "BtnLogin"
@@ -113,30 +113,29 @@ Partial Class Login
         '
         Me.Label4.AutoSize = True
         Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label4.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(178, 379)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 19)
+        Me.Label4.Size = New System.Drawing.Size(124, 16)
         Me.Label4.TabIndex = 38
         Me.Label4.Text = "Belum punya akun?"
         '
-        'PicPassword
+        'PictureBox1
         '
-        Me.PicPassword.BackgroundImage = CType(resources.GetObject("PicPassword.BackgroundImage"), System.Drawing.Image)
-        Me.PicPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PicPassword.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PicPassword.Location = New System.Drawing.Point(496, 225)
-        Me.PicPassword.Name = "PicPassword"
-        Me.PicPassword.Size = New System.Drawing.Size(22, 22)
-        Me.PicPassword.TabIndex = 39
-        Me.PicPassword.TabStop = False
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(496, 225)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(22, 22)
+        Me.PictureBox1.TabIndex = 39
+        Me.PictureBox1.TabStop = False
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(544, 461)
-        Me.Controls.Add(Me.PicPassword)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.Label3)
@@ -148,7 +147,7 @@ Partial Class Login
         Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Name = "Login"
         Me.Text = "Login"
-        CType(Me.PicPassword, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -163,4 +162,5 @@ Partial Class Login
     Friend WithEvents BtnLogin As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents PicPassword As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
