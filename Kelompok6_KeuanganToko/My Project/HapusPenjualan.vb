@@ -6,13 +6,13 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LabID.Text = Penjualan.barangMasuk.GSId.ToString
+        LabID.Text = Penjualan.penjualan.GSId.ToString
 
-        LabNamaBarang.Text = Penjualan.barangMasuk.GSNamaBarang
+        LabNamaBarang.Text = Penjualan.penjualan.GSNamaBarang
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-        Dim isDeleted = Penjualan.barangMasuk.DeleteBarangMasuk(Penjualan.barangMasuk.GSId)
+        Dim isDeleted = Penjualan.penjualan.DeletePenjualan(Penjualan.penjualan.GSId)
 
         If isDeleted Then
             MessageBox.Show("data berhasil dihapus")

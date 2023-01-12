@@ -55,7 +55,7 @@ Partial Class UpdatePenjualan
         'LblKode
         '
         Me.LblKode.AutoSize = True
-        Me.LblKode.Location = New System.Drawing.Point(312, 95)
+        Me.LblKode.Location = New System.Drawing.Point(123, 95)
         Me.LblKode.Name = "LblKode"
         Me.LblKode.Size = New System.Drawing.Size(30, 25)
         Me.LblKode.TabIndex = 2

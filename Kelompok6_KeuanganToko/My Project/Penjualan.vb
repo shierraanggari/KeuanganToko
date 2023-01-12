@@ -1,5 +1,6 @@
 ﻿Public Class Penjualan
-    Public Shared barangMasuk As New Penjualan
+    Public Shared penjualan As New Penjualan
+    Public Property Gridpenjualan_Load As Object
 
     Sub New()
 
@@ -10,19 +11,19 @@
         reloadBarangMasukTable()
     End Sub
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Penjualan.Show()
+        BtnTambah.Show()
     End Sub
 
 
 
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        If GridBarangMasuk.SelectedRows.count = 1 Then
+        If DataGridViewPenjualan.SelectedRows.Count = 1 Then
 
-            barangMasuk.GSId = UpdatePenjualan.Item("ID", GridBarangMasuk.CurrentRow.Index).value
-            barangMasuk.GSNamaBarang = GridupdatePenjualan.Item("NAMA BARANG", GridBarangMasuk.CurrentRow.index)Value
-            barangMasuk.GSQty = GridBarangMasuk.Item("QTY", GridbarangMasuk.CurrentRow.index)Value
-            barangMasuk.GSTanggalMasuk = GridBarangMasuk.Item("Tanggl masuk", GridBarangMasuk.CurrentRow.index)Value
+            penjualan.GSId = DataGridViewPenjualan.Item("ID", DataGridViewPenjualan.CurrentRow.Index).Value
+            penjualan.GSNamaBarang = DataGridViewPenjualan.Item("NAMA BARANG", DataGridViewPenjualan.CurrentRow.Index).Value
+            penjualan.GSQty = DataGridViewPenjualan.Item("QTY", DataGridViewPenjualan.CurrentRow.Index).Value
+            penjualan.GSTanggalMasuk = DataGridViewPenjualan.Item("Tanggl masuk", DataGridViewPenjualan.CurrentRow.Index).Value
 
             UpdatePenjualan.Show()
 
@@ -32,16 +33,20 @@
     End Sub
 
     Public Sub reloadBarangMasukTable()
-        GridBarangMasuk.Datasource = barangMasuk.showALLData()
+        DataGridViewPenjualan.DataSource = penjualan.showALLData
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        If GridBarangMasuk.SelectedRows.Count = 1 Then
-            barangMasuk.GSId = GridBarangMasuk.Item("ID", GridBarangMasuk.CurrentRow.Index).Value
-            barangMasuk.GSNamaBarang = GridBarangMasuk.Item("nama barang", GridBarangMasuk.CurrentRow.Index).value
-            DeleteBarangMasuk.Show()
+        If Gridpenjualan_Load.SelectedRows.Count = 1 Then
+            penjualan.GSId = DataGridViewPenjualan.Item("ID", DataGridViewPenjualan.CurrentRow.Index).Value
+            penjualan.GSNamaBarang = DataGridViewPenjualan.Item("nama barang", DataGridViewPenjualan.CurrentRow.Index).Value
+            HapusPenjualan.Show()
         Else
             MessageBox.Show("Pilih Data Dalam Table")
         End If
+    End Sub
+
+    Private Sub penjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
