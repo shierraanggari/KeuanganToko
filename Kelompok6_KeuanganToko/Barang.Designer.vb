@@ -62,7 +62,7 @@ Partial Class Barang
         Me.ToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripMenuItem1.AutoSize = False
         Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.ToolStripMenuItem1.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
@@ -74,7 +74,7 @@ Partial Class Barang
         Me.ToolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripMenuItem2.AutoSize = False
         Me.ToolStripMenuItem2.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ToolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(122, 30)
@@ -85,7 +85,7 @@ Partial Class Barang
         Me.ToolStripMenuItem3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripMenuItem3.AutoSize = False
         Me.ToolStripMenuItem3.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ToolStripMenuItem3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ToolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         Me.ToolStripMenuItem3.Size = New System.Drawing.Size(122, 30)
@@ -95,7 +95,7 @@ Partial Class Barang
         '
         Me.NamaToolStripMenuItem.AutoSize = False
         Me.NamaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
-        Me.NamaToolStripMenuItem.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.NamaToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.NamaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.NamaToolStripMenuItem.Image = CType(resources.GetObject("NamaToolStripMenuItem.Image"), System.Drawing.Image)
         Me.NamaToolStripMenuItem.Margin = New System.Windows.Forms.Padding(5, 0, 0, 0)
@@ -111,7 +111,7 @@ Partial Class Barang
         Me.LogoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InfoText
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
         Me.LogoutToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'DataGridViewBarang
@@ -134,7 +134,7 @@ Partial Class Barang
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Heebo", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.InfoText
         Me.Label1.Location = New System.Drawing.Point(0, 49)
         Me.Label1.Name = "Label1"
@@ -149,7 +149,7 @@ Partial Class Barang
         Me.BtnTambah.BackColor = System.Drawing.Color.MidnightBlue
         Me.BtnTambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTambah.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.ForeColor = System.Drawing.Color.Transparent
         Me.BtnTambah.Location = New System.Drawing.Point(722, 473)
         Me.BtnTambah.Name = "BtnTambah"
@@ -163,7 +163,7 @@ Partial Class Barang
         Me.BtnUpdate.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnUpdate.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnUpdate.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BtnUpdate.Location = New System.Drawing.Point(118, 473)
         Me.BtnUpdate.Name = "BtnUpdate"
@@ -177,7 +177,7 @@ Partial Class Barang
         Me.BtnHapus.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnHapus.Font = New System.Drawing.Font("Heebo", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnHapus.ForeColor = System.Drawing.Color.DarkRed
         Me.BtnHapus.Location = New System.Drawing.Point(12, 473)
         Me.BtnHapus.Name = "BtnHapus"

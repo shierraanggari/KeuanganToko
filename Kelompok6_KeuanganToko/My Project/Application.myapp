@@ -6,4 +6,5 @@
   <EnableVisualStyles>true</EnableVisualStyles>
   <AuthenticationMode>0</AuthenticationMode>
   <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+  <MainForm>Login</MainForm>
 </MyApplicationData>
