@@ -21,9 +21,11 @@
 
         'apabila fungsi DeleteBarangMasuk bernilai true, maka statement if akan dijalankan
         If isDeleted Then
+            MainBarangMasuk.barangMasuk.UpdateDecreaseStockBarang(MainBarangMasuk.barangMasuk.GSQty, LabelNamaBarang.Text)
             MessageBox.Show("Data berhasil dihapus")
             Me.Close()
             MainBarangMasuk.reloadBarangMasuktable()
+            Barang.ReloadDataTableDatabase()
 
             'jika bernilai false, maka statement else akan dijalankan
         Else

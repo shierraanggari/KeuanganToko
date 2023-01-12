@@ -48,6 +48,7 @@
         If GridBarangMasuk.SelectedRows.Count = 1 Then
             barangMasuk.GSId = GridBarangMasuk.Item("ID", GridBarangMasuk.CurrentRow.Index).Value
             barangMasuk.GSNamaBarang = GridBarangMasuk.Item("NAMA BARANG", GridBarangMasuk.CurrentRow.Index).Value
+            barangMasuk.GSQty = GridBarangMasuk.Item("QTY", GridBarangMasuk.CurrentRow.Index).Value
             DeleteBarangMasuk.Show()
         Else
             MessageBox.Show("Perlu memilih data di dalam tabel")

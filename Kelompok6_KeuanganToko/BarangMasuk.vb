@@ -208,5 +208,59 @@ Public Class BarangMasuk
         End Try
     End Function
 
+    Public Function UpdateIncreaseStockBarang(jumlahBarang As String, idBarang As String)
+        Try
 
+
+            dbConn.ConnectionString = ConnectionString()
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+
+            sqlQuery = "UPDATE barang SET stock = stock + " + jumlahBarang +
+                        " WHERE id_barang=" + idBarang
+
+            sqlCommand.CommandText = sqlQuery
+            sqlRead = sqlCommand.ExecuteReader
+
+
+            dbConn.Close()
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Debug.WriteLine(ex.Message)
+            Return False
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function UpdateDecreaseStockBarang(jumlahBarang As String, namaBarang As String)
+        Try
+
+
+            dbConn.ConnectionString = ConnectionString()
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+
+            sqlQuery = "UPDATE barang SET stock = stock - " + jumlahBarang +
+                        " WHERE nama_barang='" + namaBarang + "'"
+
+            sqlCommand.CommandText = sqlQuery
+            sqlRead = sqlCommand.ExecuteReader
+
+
+            dbConn.Close()
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Debug.WriteLine(ex.Message)
+            Return False
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
 End Class

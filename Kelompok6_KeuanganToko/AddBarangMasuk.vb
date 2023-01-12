@@ -32,9 +32,11 @@
 
             'apabila fungsi AddBarangMasuk bernilai true, maka statement if akan dijalankan
             If isAdded Then
+                barangMasuk.UpdateIncreaseStockBarang(qty, barangId.ToString)
                 MessageBox.Show("List Barang Masuk Berhasil dibuat !")
                 Me.Close()
                 MainBarangMasuk.reloadBarangMasuktable()
+                Barang.ReloadDataTableDatabase()
 
                 'jika bernilai false, maka statement else akan dijalankan
             Else
