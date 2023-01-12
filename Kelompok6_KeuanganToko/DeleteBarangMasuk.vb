@@ -17,11 +17,11 @@
 
         'memanggil fungsi DeleteBarangMasuk untuk menghapus data barang masuk ke dalam database
         'berdasarkan id yang telah dideklarasikan menggunakan setter tadi
-        Dim isDeleted = MainBarangMasuk.barangMasuk.DeleteBarangMasuk(MainBarangMasuk.barangMasuk.GSId)
+        Dim isDeleted = FormPenjualan.penjualan.DeletePenjualan(MainBarangMasuk.barangMasuk.GSId)
 
         'apabila fungsi DeleteBarangMasuk bernilai true, maka statement if akan dijalankan
         If isDeleted Then
-            MainBarangMasuk.barangMasuk.UpdateDecreaseStockBarang(MainBarangMasuk.barangMasuk.GSQty, LabelNamaBarang.Text)
+            'FormPenjualan.penjualan.UpdateDecreaseStockBarang(MainBarangMasuk.barangMasuk.GSQty, LabelNamaBarang.Text)
             MessageBox.Show("Data berhasil dihapus")
             Me.Close()
             MainBarangMasuk.reloadBarangMasuktable()
