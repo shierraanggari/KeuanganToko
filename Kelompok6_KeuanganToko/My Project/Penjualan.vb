@@ -33,7 +33,7 @@
     End Sub
 
     Public Sub reloadBarangMasukTable()
-        DataGridViewPenjualan.DataSource = penjualan.showALLData
+        DataGridViewPenjualan.DataSource = penjualan.ShowAllData()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click

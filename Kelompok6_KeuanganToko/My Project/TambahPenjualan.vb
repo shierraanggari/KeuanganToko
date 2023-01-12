@@ -19,7 +19,7 @@ Public Class TambahPenjualan
             Dim dateBarangMasuk = DTMTanggalJual.Value.ToString("yyyy-MM-dd")
             Dim qty = NumberQTY.Value.ToString()
 
-            Dim isAdded = (barangid.ToString(), qty, dateBarangMasuk)
+            Dim isAdded = penjualan.AddPenjualan(barangid.ToString(), qty, dateBarangMasuk)
 
             If isAdded Then
                 MessageBox.Show("List Barang Masuk Berhasil")
@@ -29,6 +29,7 @@ Public Class TambahPenjualan
                 MessageBox.Show("data harus diisi!!")
             End If
         End If
+
     End Sub
 
     Private Sub TambahPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load

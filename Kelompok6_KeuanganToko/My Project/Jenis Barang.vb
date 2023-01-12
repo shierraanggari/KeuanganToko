@@ -13,7 +13,7 @@ Public Class Penjualan
     Private ReadOnly server As String = "localhost"
     Private ReadOnly usernameDB As String = "root"
     Private ReadOnly passwordDB As String = ""
-    Private ReadOnly database As String = "keuangan_toko"
+    Private ReadOnly database As String = "penjualan"
 
     Private id As Integer
     Private namaBarang As String
@@ -74,11 +74,11 @@ Public Class Penjualan
 
             'sqlquery = string yang berisi perintah-perintah query
             sqlQuery = "SELECT
-                                BM.ID_BARANG_MASUK AS ID,
+                                BM.ID_BARANG AS ID,
                                 BR.NAMA_BARANG AS 'NAMA BARANG',
                                 BM.JUMLAH_BARANG_MASUK AS QTY,
                                 BM.TANGGAL_BARANG_MASUK AS 'TANGGAL MASUK'
-                             FROM BARANG_MASUK AS BM
+                             FROM PENJUALAN AS PN
                              JOIN BARANG AS BR ON BR.ID_BARANG = BM.ID_BARANG"
             'perintah query di atas akan disimpan di dalam properti sqlCommand.CommandText
             sqlCommand.CommandText = sqlQuery
