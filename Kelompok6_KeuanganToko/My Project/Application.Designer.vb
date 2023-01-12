@@ -33,7 +33,6 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Kelompok6_KeuanganToko.MainBarangMasuk
         End Sub
     End Class
 End Namespace
