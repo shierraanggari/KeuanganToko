@@ -22,36 +22,30 @@ Partial Class TambahPenjualan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboIdBarang = New System.Windows.Forms.ComboBox()
-        Me.DateTimePickerTanggalJual = New System.Windows.Forms.DateTimePicker()
-        Me.TxtJumlahBarang = New System.Windows.Forms.TextBox()
+        Me.CbIdBarang = New System.Windows.Forms.ComboBox()
+        Me.DTMTanggalJual = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Button()
+        Me.NumberQTY = New System.Windows.Forms.NumericUpDown()
+        CType(Me.NumberQTY, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboIdBarang
+        'CbIdBarang
         '
-        Me.ComboIdBarang.FormattingEnabled = True
-        Me.ComboIdBarang.Location = New System.Drawing.Point(304, 88)
-        Me.ComboIdBarang.Name = "ComboIdBarang"
-        Me.ComboIdBarang.Size = New System.Drawing.Size(182, 33)
-        Me.ComboIdBarang.TabIndex = 11
+        Me.CbIdBarang.FormattingEnabled = True
+        Me.CbIdBarang.Location = New System.Drawing.Point(304, 88)
+        Me.CbIdBarang.Name = "CbIdBarang"
+        Me.CbIdBarang.Size = New System.Drawing.Size(182, 33)
+        Me.CbIdBarang.TabIndex = 11
         '
-        'DateTimePickerTanggalJual
+        'DTMTanggalJual
         '
-        Me.DateTimePickerTanggalJual.Location = New System.Drawing.Point(299, 250)
-        Me.DateTimePickerTanggalJual.Name = "DateTimePickerTanggalJual"
-        Me.DateTimePickerTanggalJual.Size = New System.Drawing.Size(300, 31)
-        Me.DateTimePickerTanggalJual.TabIndex = 10
-        '
-        'TxtJumlahBarang
-        '
-        Me.TxtJumlahBarang.Location = New System.Drawing.Point(292, 161)
-        Me.TxtJumlahBarang.Name = "TxtJumlahBarang"
-        Me.TxtJumlahBarang.Size = New System.Drawing.Size(347, 31)
-        Me.TxtJumlahBarang.TabIndex = 9
+        Me.DTMTanggalJual.Location = New System.Drawing.Point(299, 250)
+        Me.DTMTanggalJual.Name = "DTMTanggalJual"
+        Me.DTMTanggalJual.Size = New System.Drawing.Size(300, 31)
+        Me.DTMTanggalJual.TabIndex = 10
         '
         'Label3
         '
@@ -89,30 +83,38 @@ Partial Class TambahPenjualan
         Me.BtnTambah.Text = "Tambah"
         Me.BtnTambah.UseVisualStyleBackColor = True
         '
+        'NumberQTY
+        '
+        Me.NumberQTY.Location = New System.Drawing.Point(301, 172)
+        Me.NumberQTY.Name = "NumberQTY"
+        Me.NumberQTY.Size = New System.Drawing.Size(180, 31)
+        Me.NumberQTY.TabIndex = 13
+        '
         'TambahPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.NumberQTY)
         Me.Controls.Add(Me.BtnTambah)
-        Me.Controls.Add(Me.ComboIdBarang)
-        Me.Controls.Add(Me.DateTimePickerTanggalJual)
-        Me.Controls.Add(Me.TxtJumlahBarang)
+        Me.Controls.Add(Me.CbIdBarang)
+        Me.Controls.Add(Me.DTMTanggalJual)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "TambahPenjualan"
         Me.Text = "TambahPenjualan"
+        CType(Me.NumberQTY, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ComboIdBarang As ComboBox
-    Friend WithEvents DateTimePickerTanggalJual As DateTimePicker
-    Friend WithEvents TxtJumlahBarang As TextBox
+    Friend WithEvents CbIdBarang As ComboBox
+    Friend WithEvents DTMTanggalJual As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnTambah As Button
+    Friend WithEvents NumberQTY As NumericUpDown
 End Class

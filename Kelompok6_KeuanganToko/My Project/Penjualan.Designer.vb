@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class BtnAdd
+Partial Class Penjualan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,6 +26,9 @@ Partial Class BtnAdd
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.DataGridViewPenjualan = New System.Windows.Forms.DataGridView()
+        Me.ID_Barang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.jumlah_Barang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tgl_masuk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridViewPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,14 +62,36 @@ Partial Class BtnAdd
         'DataGridViewPenjualan
         '
         Me.DataGridViewPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewPenjualan.Location = New System.Drawing.Point(116, 12)
+        Me.DataGridViewPenjualan.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_Barang, Me.jumlah_Barang, Me.tgl_masuk})
+        Me.DataGridViewPenjualan.Location = New System.Drawing.Point(143, 12)
         Me.DataGridViewPenjualan.Name = "DataGridViewPenjualan"
         Me.DataGridViewPenjualan.RowHeadersWidth = 62
         Me.DataGridViewPenjualan.RowTemplate.Height = 33
-        Me.DataGridViewPenjualan.Size = New System.Drawing.Size(690, 423)
+        Me.DataGridViewPenjualan.Size = New System.Drawing.Size(625, 423)
         Me.DataGridViewPenjualan.TabIndex = 16
         '
-        'BtnAdd
+        'ID_Barang
+        '
+        Me.ID_Barang.HeaderText = "ID_Barang"
+        Me.ID_Barang.MinimumWidth = 8
+        Me.ID_Barang.Name = "ID_Barang"
+        Me.ID_Barang.Width = 150
+        '
+        'jumlah_Barang
+        '
+        Me.jumlah_Barang.HeaderText = "jumlah barang"
+        Me.jumlah_Barang.MinimumWidth = 8
+        Me.jumlah_Barang.Name = "jumlah_Barang"
+        Me.jumlah_Barang.Width = 150
+        '
+        'tgl_masuk
+        '
+        Me.tgl_masuk.HeaderText = "tgl_masuk"
+        Me.tgl_masuk.MinimumWidth = 8
+        Me.tgl_masuk.Name = "tgl_masuk"
+        Me.tgl_masuk.Width = 150
+        '
+        'Penjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -76,7 +101,7 @@ Partial Class BtnAdd
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.BtnTambah)
         Me.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Name = "BtnAdd"
+        Me.Name = "Penjualan"
         Me.Text = "Penjualan"
         CType(Me.DataGridViewPenjualan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -87,4 +112,7 @@ Partial Class BtnAdd
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnDelete As Button
     Friend WithEvents DataGridViewPenjualan As DataGridView
+    Friend WithEvents ID_Barang As DataGridViewTextBoxColumn
+    Friend WithEvents jumlah_Barang As DataGridViewTextBoxColumn
+    Friend WithEvents tgl_masuk As DataGridViewTextBoxColumn
 End Class
